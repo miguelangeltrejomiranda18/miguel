@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagen</title>
+</head>
+<body>
+    <img src="img.jpg.jpg"width="1400px" height="300px" alt="">
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Meso Mapache</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0c0d5f 0%, #0e29a3 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calculator-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background: #489724;
+            color: #041809;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #d31212;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 159, 28, 0.4);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            font-size: 1.2rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .images-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .image-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .share-section {
+            text-align: center;
+            margin-top: 80px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+        }
+
+        .share-link {
+            margin-top: 15px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            color: #333;
+            word-break: break-all;
+            font-size: 1rem;
+        }
+
+        .copy-btn {
+            margin-top: 10px;
+            background: #b9632a;
+        }
+
+        .copy-btn:hover {
+            background: #a10a0a;
+            box-shadow: 0 4px 12px rgba(160, 207, 49, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+           <h1>Calculadora Meso Mapache</h1>
+            <p class="subtitle">Esta calculadora te ayudara a entender mejor las maravillas de las matematicas antiguas</p>
+        </header>
+
+        <div class="content">
+            <div class="calculator-section">
+                <h2 class="section-title">🧮Dime como puedo ayudarte</h2>
+                
+                <div class="input-group">
+                    <label for="sistema">Sistema Numérico</label>
+                    <select id="sistema">
+                        <option value="maya">Maya (Base 20)</option>
+                        <option value="azteca">Azteca (Base 20)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="operacion">Operación</label>
+                    <select id="operacion">
+                        <option value="suma">Suma</option>
+                        <option value="resta">Resta</option>
+                        <option value="multiplicacion">Multiplicación</option>
+                        <option value="division">División</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="num1">Primer numero (en sistema decimal)</label>
+                    <input type="number" id="num1" placeholder="Ingresa el primer número" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="num2">Segundo numero (en sistema decimal)</label>
+                    <input type="number" id="num2" placeholder="Ingresa el segundo número" required>
+                </div>
+
+                <button class="btn" onclick="calcular()">Calcular</button>
+
+                <div class="result" id="resultado">
+                    El resultado aparecerá aquí...
+                </div>
+            </div>
+
+            <div class="images-section">
+                <div class="image-card">
+                    <h3 class="section-title">Sistema Numérico Maya</h3>
+                    <img src="maya.jpg" alt="Sistema numérico maya">
+                    <p>Los mayas usaban un sistema vigesimal (base 20) con tres símbolos: punto (1), raya (5) y concha (0).</p>
+                </div>
+
+                <div class="image-card">
+                    <h3 class="section-title">Sistema Numérico Azteca</h3>
+                    <img src="cultura-azteca.jpg" alt="Sistema numérico azteca">
+                    <p>Los aztecas también usaban base 20, con símbolos específicos para cada unidad hasta el 20 y sus múltiplos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="share-section">
+            <h2 class="section-title">🔗 Compartir la Calculadora</h2>
+            <p>Copia el link a continuación y compártelo con tus compañeros. Al abrirlo, la calculadora funcionará directamente en su navegador:</p>
+            <div class="share-link" id="shareLink">
+                <!-- El link se generará automáticamente -->
+            </div>
+            <button class="btn copy-btn" onclick="copiarLink()">Copiar Link</button>
+        </div>
+    </div>
+
+    <script>
+        // Función principal de cálculo
+        function calcular() {
+            const sistema = document.getElementById('sistema').value;
+            const operacion = document.getElementById('operacion').value;
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultadoDiv.textContent = "Por favor, ingresa números válidos.";
+                return;
+            }
+
+            let resultadoDecimal;
+            switch (operacion) {
+                case 'suma':
+                    resultadoDecimal = num1 + num2;
+                    break;
+                case 'resta':
+                    resultadoDecimal = num1 - num2;
+                    break;
+                case 'multiplicacion':
+                    resultadoDecimal = num1 * num2;
+                    break;
+                case 'division':
+                    if (num2 === 0) {
+                        resultadoDiv.textContent = "Error: No se puede dividir entre cero.";
+                        return;
+                    }
+                    resultadoDecimal = num1 / num2;
+                    break;
+                default:
+                    resultadoDecimal = 0;
+            }
+
+            // Convertir resultado al sistema mesoamericano seleccionado
+            const resultadoMesoamericano = convertirAMesoamericano(resultadoDecimal, sistema);
+            resultadoDiv.innerHTML = `
+                Resultado en decimal: ${resultadoDecimal.toFixed(2)}<br>
+                Resultado en sistema ${sistema}: ${resultadoMesoamericano}
+            `;
+        }
+
+        // Función de conversión a sistemas mesoamericanos
+        function convertirAMesoamericano(numero, sistema) {
+            numero = Math.round(numero); // Redondear a entero para simplificar la conversión
+            if (numero < 0) return "Número negativo (no soportado en sistemas tradicionales)";
+
+            if (sistema === 'maya') {
+                return convertirAMaya(numero);
+            } else if (sistema === 'azteca') {
+                return convertirAAzteca(numero);
+            }
+            return "Sistema no soportado";
+        }
+
+        // Conversión a sistema maya
+        function convertirAMaya(numero) {
+            if (numero === 0) return "🐌  (Concha - 0)";
+
+            const simbolos = {
+                1: "⚫ (Punto)",
+                5: "𝋥 (Raya)",
+                20: "🚩 ×200",
+                400: "🪶 ×400",
+                8000: "💼×8000"
+            };
+
+            let resultado = [];
+            let divisores = [8000, 400, 20, 1];
+
+            divisores.forEach(div => {
+                const cantidad = Math.floor(numero / div);
+                if (cantidad > 0) {
+                    if (div === 1) {
+                        // Desglosar en rayas y puntos
+                        const rayas = Math.floor(cantidad / 5);
+                        const puntos = cantidad % 5;
+                        if (rayas > 0) resultado.push(`${rayas} ${simbolos[5]}`);
+                        if (puntos > 0) resultado.push(`${puntos} ${simbolos[1]}`);
+                    } else {
+                        resultado.push(`${cantidad} ${simbolos[div]}`);
+                    }
+                    numero = numero % div;
+                }
+            });
+
+            return resultado.join(" + ");
+        }
+
+        // Conversión a sistema azteca
+        function convertirAAzteca(numero) {
+            if (numero === 0) return "Símbolo de 0 (no tenía símbolo único, se representaba con vacío)";
+
+            const simbolos = {
+                1: "○ (Unidad)",
+                20: "🟢 (Veintena)",
+                400: "🟡 (Cuatrocientos)",
+                8000: "🔴 (Ocho mil)"
+            };
+
+            let resultado = [];
+            let divisores = [8000, 400, 20, 1];
+
+            divisores.forEach(div => {
+                const cantidad = Math.floor(numero / div);
+                if (cantidad > 0) {
+                    resultado.push(`${cantidad} ${simbolos[div]}`);
+                    numero = numero % div;
+                }
+            });
+
+            return resultado.join(" + ");
+        }
+
+        // Generar link de compartición (funciona al guardar el archivo)
+        window.onload = function() {
+            const shareLink = document.getElementById('shareLink');
+            // Si el archivo está en un servidor, se usará la URL completa. Si es local, se muestra la ruta del archivo.
+            if (window.location.href.includes('file://')) {
+                shareLink.textContent = "Para compartir, sube este archivo a un hosting gratuito (como GitHub Pages, Netlify o Vercel) y usa el link que te den. Si lo abres localmente, tus compañeros necesitarán tener el archivo también.";
+            } else {
+                shareLink.textContent = window.location.href;
+            }
+        }
+
+        // Función para copiar el link
+        function copiarLink() {
+            const shareLink = document.getElementById('shareLink').textContent;
+            navigator.clipboard.writeText(shareLink)
+                .then(() => alert("Link copiado exitosamente!"))
+                .catch(() => alert("Error al copiar el link. Por favor, cópialo manualmente."));
+        }
+    </script>
+</body>
+</html>
